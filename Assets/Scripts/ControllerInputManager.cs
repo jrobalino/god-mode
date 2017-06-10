@@ -26,7 +26,7 @@ public class ControllerInputManager : MonoBehaviour {
 	private Vector3 teleportLocation;
 	public GameObject player;
 	public LayerMask laserMask;
-	public float yNudgeAmount = 2f; //specific to teleportAimerObject right
+	public float yNudgeAmount = 2f; 
 	public float teleporterMaxHorizontal = 15.0f;
 	public float teleporterMaxVertical = 17.0f;
 	public float playerHeight = 2.0f;
@@ -47,25 +47,6 @@ public class ControllerInputManager : MonoBehaviour {
 	public float moveSpeed = 4f;
 	private Vector3 movementDirection;
 
-	// Object Menu Swiping
-	public bool rightController;
-
-	bool menuActive = false;
-	float swipeSum;
-	float touchLast;
-	float touchCurrent;
-	float distance;
-	bool hasSwipedLeft;
-	bool hasSwipedRight;
-	public ObjectMenuManager objectMenuManager;
-
-	// Trigger fan
-	public Fan fan;
-	public AudioSource fanSound;
-
-	// Keep track of ball on platform
-	public BallReset ballReset;
-
 
 	// Use this for initialization
 	void Start () {
@@ -75,7 +56,8 @@ public class ControllerInputManager : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 
 		device = SteamVR_Controller.Input((int)trackedObj.index);
 		leftDevice = SteamVR_Controller.Input(leftIndex);
@@ -91,7 +73,7 @@ public class ControllerInputManager : MonoBehaviour {
 			movementDirection = movementDirection * moveSpeed * Time.deltaTime;
 			player.transform.position += movementDirection;
 		}
-		
+
 		if (isDashing && useDash)
 		{
 			lerpTime += 1 * dashSpeed;
@@ -103,10 +85,10 @@ public class ControllerInputManager : MonoBehaviour {
 				lerpTime = 0;
 			}
 		}
-		
+
 		else
 		{
-			
+
 			if (leftDevice.GetPress(SteamVR_Controller.ButtonMask.Touchpad) && laser != null)
 			{
 				canTeleport = false;
@@ -156,7 +138,7 @@ public class ControllerInputManager : MonoBehaviour {
 
 			if (canTeleport)
 			{
-				if(useDash)
+				if (useDash)
 				{
 					dashStartPosition = player.transform.position;
 					isDashing = true;
@@ -165,105 +147,7 @@ public class ControllerInputManager : MonoBehaviour {
 			}
 		}
 		/**** End Teleportation ****/
-
-		// Detect touchpad swipes
-		if (rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) && objectMenuManager != null)
-		{
-			menuActive = !menuActive;
-			if (menuActive)
-			{
-				ShowMenu();
-			}
-			else HideMenu();
-		}
-
-		if (rightDevice.GetTouchDown(SteamVR_Controller.ButtonMask.Touchpad) && objectMenuManager != null && menuActive == true)
-		{
-			touchLast = rightDevice.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad).x;
-		}
-
-		if (rightDevice.GetTouch(SteamVR_Controller.ButtonMask.Touchpad) && objectMenuManager != null && menuActive == true)
-		{
-			touchCurrent = rightDevice.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad).x;
-			distance = touchCurrent - touchLast;
-			touchLast = touchCurrent;
-			swipeSum += distance;
-
-			if (!hasSwipedRight && swipeSum > 0.5f && objectMenuManager != null)
-			{
-				swipeSum = 0;
-				SwipeRight();
-				hasSwipedRight = true;
-				hasSwipedLeft = false;
-			}
-			if (!hasSwipedLeft && swipeSum < -0.5f && objectMenuManager != null)
-			{
-				swipeSum = 0;
-				SwipeLeft();
-				hasSwipedRight = false;
-				hasSwipedLeft = true;
-			}
-		}
-
-		if (rightDevice.GetTouchUp(SteamVR_Controller.ButtonMask.Touchpad) && objectMenuManager != null)
-		{
-			swipeSum = 0;
-			touchCurrent = 0;
-			touchLast = 0;
-			hasSwipedLeft = false;
-			hasSwipedRight = false;
-		}
-
-		if (rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Trigger) && objectMenuManager != null && menuActive == true)
-		{
-			// Spawn object currently selected by menu. You could skip the SpawnObject function, but this function gives flexibility to support other types of controllers
-			SpawnObject();
-			menuActive = false;
-			HideMenu();
-		}
-
-		/**** Trigger Fan ****/
-		if (rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Grip) && fan != null)
-		{
-			fan.startFan();
-		}
-
-		if (rightDevice.GetPressUp(SteamVR_Controller.ButtonMask.Grip) && fan != null)
-		{
-			fan.stopFan();
-		}
-
-
-	} /**** End Update() ****/
-
-
-	/**** Continue Object Menu Swip ****/
-
-	void ShowMenu()
-	{
-		objectMenuManager.ShowMenu();
 	}
-
-	void HideMenu()
-	{
-		objectMenuManager.HideMenu();
-	}
-
-	void SpawnObject()
-	{
-		objectMenuManager.SpawnCurrentObject();
-	}
-
-	void SwipeLeft()
-	{
-		objectMenuManager.MenuLeft();
-	}
-
-	void SwipeRight()
-	{
-		objectMenuManager.MenuRight();
-	}
-	/**** End Object Menu Swipe ****/
 
 	/*** Grabbing and Throwing ****/
 	// To use this script, add colliders (say, sphere) to controller, enable Is Trigger, and decrease Radius to 0.2
@@ -272,53 +156,17 @@ public class ControllerInputManager : MonoBehaviour {
 
 	private void OnTriggerStay(Collider col)
 	{
-		if (col.gameObject.CompareTag("Throwable") || col.gameObject.CompareTag("Ball"))
+		if (col.gameObject.CompareTag("Throwable"))
 		{
 			if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
 			{
 				ThrowObject(col);
-				if (col.gameObject.CompareTag("Ball"))
-				{
-					DropBall();
-				}
-			}
-			else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
-			{
-				GrabObject(col);
-				if (col.gameObject.CompareTag("Ball"))
-				{
-					GrabBall();
-				}
-			}
-		}
-
-		if (col.gameObject.CompareTag("Structure"))
-		{
-			if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
-			{
-				PlaceObject(col);
 			}
 			else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
 			{
 				GrabObject(col);
 			}
 		}
-
-		if (col.gameObject.CompareTag("Ball Reset"))
-		{
-			ballReset.ResetBall();
-			col.gameObject.GetComponent<AudioSource>().Play();
-		}
-	}
-
-	void GrabBall()
-	{
-		ballReset.GrabBall();
-	}
-
-	void DropBall()
-	{
-		ballReset.DropBall();
 	}
 
 	void GrabObject(Collider coli)
@@ -335,11 +183,6 @@ public class ControllerInputManager : MonoBehaviour {
 		rigidBody.isKinematic = false;
 		rigidBody.velocity = device.velocity * throwForce;
 		rigidBody.angularVelocity = device.angularVelocity;
-	}
-
-	void PlaceObject(Collider coli)
-	{
-		coli.transform.SetParent(null);
 	}
 
 	/**** End Grabbing and Throwing ****/

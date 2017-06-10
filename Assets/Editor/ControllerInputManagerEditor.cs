@@ -11,8 +11,6 @@ public class ControllerInputEditor : Editor
 		var ControllerInputManager = target as ControllerInputManager;
 
 		ControllerInputManager.throwForce = EditorGUILayout.FloatField("Throw Force", ControllerInputManager.throwForce);
-		EditorGUILayout.PrefixLabel("Ball Manager");
-		ControllerInputManager.ballReset = (BallReset)EditorGUILayout.ObjectField(ControllerInputManager.ballReset, typeof(BallReset), true);
 		ControllerInputManager.leftController = EditorGUILayout.Toggle("Left Controller", ControllerInputManager.leftController);
 
 		using (var group = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(ControllerInputManager.leftController)))
@@ -52,20 +50,6 @@ public class ControllerInputEditor : Editor
 				EditorGUILayout.PrefixLabel("Walk Speed");
 				ControllerInputManager.moveSpeed = EditorGUILayout.FloatField(ControllerInputManager.moveSpeed);
 				EditorGUI.indentLevel--;
-			}
-		}
-
-		ControllerInputManager.rightController = EditorGUILayout.Toggle("Right Controller", ControllerInputManager.rightController);
-
-		using (var group = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(ControllerInputManager.rightController)))
-		{
-			if (group.visible == true)
-			{
-				EditorGUI.indentLevel++;
-				EditorGUILayout.PrefixLabel("Object Menu Manager");
-				ControllerInputManager.objectMenuManager = (ObjectMenuManager)EditorGUILayout.ObjectField(ControllerInputManager.objectMenuManager, typeof(ObjectMenuManager), true);
-				EditorGUILayout.PrefixLabel("Fan Manager");
-				ControllerInputManager.fan = (Fan)EditorGUILayout.ObjectField(ControllerInputManager.fan, typeof(Fan), true);
 			}
 		}
 	}
