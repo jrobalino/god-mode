@@ -1,0 +1,1530 @@
+fileFormatVersion: 2
+guid: 65eb6da4dbc679443b2c0c869bc46558
+timeCreated: 1481241092
+licenseType: Store
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 16
+    name: Blank
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 42
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Blank_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Cubits_Dogos_Demo
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.95567954
+        scalar[2]: 0.8602941
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 0.7352941
+        scalar[1]: 0.3803245
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 0.6544118
+        scalar[1]: 0.33764866
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 0.7372549
+        scalar[1]: 0.3803922
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0.28676468
+        scalar[1]: 0.21341573
+        scalar[2]: 0.08223398
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.9411765
+        scalar[2]: 0.9935091
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: ac5603afcb5eff24682f5939a119b525, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: ad557640b5426bf4eb8061c849bbd7af, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Cubits_Dogos_Demo_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 1
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Cupcake
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 0.6838235
+        scalar[1]: 0.6838235
+        scalar[2]: 0.6838235
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 0.68235296
+        scalar[1]: 0.68235296
+        scalar[2]: 0.68235296
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 0.68235296
+        scalar[1]: 0.68235296
+        scalar[2]: 0.68235296
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 0.7725491
+        scalar[1]: 0.7725491
+        scalar[2]: 0.7725491
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0.29411763
+        scalar[1]: 0.29411763
+        scalar[2]: 0.29411763
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.9411765
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: 4f65a324dcff4c046b44c21aa07e3c65, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: ad557640b5426bf4eb8061c849bbd7af, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Cupcake_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Icecream
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 0.4044118
+        scalar[1]: 0.4044118
+        scalar[2]: 0.4044118
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 0.16911763
+        scalar[1]: 0.16911763
+        scalar[2]: 0.16911763
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 0.4039216
+        scalar[1]: 0.4039216
+        scalar[2]: 0.4039216
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0.36764705
+        scalar[1]: 0.36764705
+        scalar[2]: 0.36764705
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 1
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: 8cbe5aa4f7799ce4fb098c2998801864, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: ad557640b5426bf4eb8061c849bbd7af, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Icecream_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Lava
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 0.50735295
+        scalar[1]: 0.50735295
+        scalar[2]: 0.50735295
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 0.16176468
+        scalar[1]: 0.16176468
+        scalar[2]: 0.16176468
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 0.16078432
+        scalar[1]: 0.16078432
+        scalar[2]: 0.16078432
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 0.16078432
+        scalar[1]: 0.16078432
+        scalar[2]: 0.16078432
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.5441177
+        scalar[2]: 0.5441177
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: 0d855b56da3d4c24988dd6bc4a211628, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: 7c8897b3777d26c4ba44183a74a9040c, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Lava_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Peanut
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.826572
+        scalar[2]: 0.6691177
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.52156866
+        scalar[2]: 0.09019608
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.52156866
+        scalar[2]: 0.09019608
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.52156866
+        scalar[2]: 0.09019608
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0.051470578
+        scalar[1]: 0.051470578
+        scalar[2]: 0.051470578
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.9691877
+        scalar[2]: 0.9411765
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: 559dd79123c28664f8fef4749e911916, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: bc177cd2c90bce742a4f1708fae54a7c, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Peanut_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Vanilla
+    prototypeName: Cubits_Dogos
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _EMISSION
+    renderQueue: -1
+    lightmapFlags: 1
+    inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: _fur_color_A_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.85098046
+        scalar[2]: 0.6627451
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_B_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.85098046
+        scalar[2]: 0.6627451
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _fur_color_C_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.85098046
+        scalar[2]: 0.6627451
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _ears_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.85098046
+        scalar[2]: 0.6627451
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _paws_color_
+      value:
+        scalar[0]: 0.3455882
+        scalar[1]: 0.3455882
+        scalar[2]: 0.3455882
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: _soft_skin_color_
+      value:
+        scalar[0]: 1
+        scalar[1]: 0.8088235
+        scalar[2]: 0.9551724
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Eyes
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: ac5603afcb5eff24682f5939a119b525, type: 3}
+    - name: Nose
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {fileID: 2800000, guid: c060158a7921ea741a43f2c57ee9eda8, type: 3}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailAlbedoMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailMask
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _DetailNormalMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _EmissionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MetallicGlossMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _OcclusionMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 1}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _BumpScale
+        second: 1
+      - first:
+          name: _Cutoff
+        second: 0.5
+      - first:
+          name: _DetailNormalMapScale
+        second: 1
+      - first:
+          name: _DstBlend
+        second: 0
+      - first:
+          name: _GlossMapScale
+        second: 1
+      - first:
+          name: _Glossiness
+        second: 0
+      - first:
+          name: _GlossyReflections
+        second: 1
+      - first:
+          name: _Metallic
+        second: 0
+      - first:
+          name: _Mode
+        second: 0
+      - first:
+          name: _OcclusionStrength
+        second: 1
+      - first:
+          name: _Parallax
+        second: 0.02
+      - first:
+          name: _SmoothnessTextureChannel
+        second: 0
+      - first:
+          name: _SpecularHighlights
+        second: 1
+      - first:
+          name: _SrcBlend
+        second: 1
+      - first:
+          name: _UVSec
+        second: 0
+      - first:
+          name: _ZWrite
+        second: 1
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+    textureParameters:
+    - name: Vanilla_basecolor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 226285648
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
