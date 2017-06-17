@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IntroManager : MonoBehaviour {
 
+	// This script activates the exit portal if the player has thrown all the pots off the edge
+
 	int potsThrown = 0;
 
 	public AudioSource levelCleared;

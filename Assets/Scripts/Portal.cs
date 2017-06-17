@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour {
 
+	// This script loads the next level if the player enters the exit portal
+
 	float portalX, portalZ;
 
 	public AudioSource portalSound;

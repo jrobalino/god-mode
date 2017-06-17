@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Bowl : MonoBehaviour {
 
+	// This script handles bowls being tossed off the island and signals the FoodManager script when bowls are placed or removed from tables
+
 	Vector3 startPosition;
 	Quaternion startRotation;
 
 	public FoodManager foodManager;
+	
 	// Use this for initialization
 	void Start () {
+		// Get the start position of the bowl
 		startPosition = transform.position;
 		startRotation = transform.rotation;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(transform.position.y < -25)
+
+		// Return the bowl to its starting position if the player tosses it over the edge
+		if (transform.position.y < -25)
 		{
 			transform.position = startPosition;
 			transform.rotation = startRotation;
@@ -26,6 +32,7 @@ public class Bowl : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 
+		// Detect whether the bowl was placed on the rich or poor table
 		if (collision.collider.name == "RichTable")
 		{
 			foodManager.feedTheRich();
@@ -39,6 +46,7 @@ public class Bowl : MonoBehaviour {
 
 	private void OnCollisionExit(Collision collision)
 	{
+		// Detect whether the bowl was taken away from the rich or poor table
 		if (collision.collider.name == "RichTable")
 		{
 			foodManager.starveTheRich();

@@ -200,6 +200,8 @@ public class ControllerInputManager : MonoBehaviour {
 		rigidBody.angularVelocity = device.angularVelocity;
 	}
 
+	// The following shield functions protect the rich dogs from being grabbed and thrown
+
 	void RaiseShield(Collider coli)
 	{
 		coli.transform.Find("Shield").gameObject.SetActive(true);

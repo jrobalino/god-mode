@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 
+	// This script plays dog sounds at random intervals
+
 	public AudioSource[] dogSounds;
 	
 	// Use this for initialization
@@ -19,6 +21,7 @@ public class AudioManager : MonoBehaviour {
 
 	void Bark()
 	{
+		// Retrieve a random sound clip and rerun this function at a random interval
 		int random = Random.Range(0, dogSounds.Length);
 		dogSounds[random].Play();
 		Invoke("Bark", Random.Range(0.5f, 4.0f));

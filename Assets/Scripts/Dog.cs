@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Dog : MonoBehaviour
 {
+	// This script animates the dogs randomly and handles how they behave if they are tossed off the island
+
 	public AudioSource fallWhine;
 
 	Vector3 startPosition;
@@ -14,8 +16,11 @@ public class Dog : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		// Get the start position of the dog
 		startPosition = transform.position;
 		startRotation = transform.rotation;
+
+		// Get the animator for the dog
 		anim = GetComponentInChildren<Animator>();
 		startAnimations();
 
@@ -24,11 +29,13 @@ public class Dog : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		// Have the dog whimper if it is tossed over the edge of the island
 		if (transform.position.y < -1 && transform.position.y > -1.1)
 		{
 			fallWhine.Play();
 		}
 
+		// Prevent the dog from falling forever
 		if (transform.position.y < -25)
 		{
 			killDog();
@@ -37,6 +44,7 @@ public class Dog : MonoBehaviour
 
 	void killDog()
 	{
+		// Return the dog to its starting position but make it inactive
 		gameObject.SetActive(false);
 		transform.position = startPosition;
 		transform.rotation = startRotation;
@@ -44,6 +52,7 @@ public class Dog : MonoBehaviour
 
 	void startAnimations()
 	{
+		// Switch between the available animations at random intervals
 		int random = Random.Range(0, 3);
 
 		switch (random)
