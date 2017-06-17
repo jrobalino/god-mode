@@ -47,6 +47,9 @@ public class ControllerInputManager : MonoBehaviour {
 	public float moveSpeed = 4f;
 	private Vector3 movementDirection;
 
+	// Dog Shield
+	Color shieldColor;
+
 
 	// Use this for initialization
 	void Start () {
@@ -167,6 +170,18 @@ public class ControllerInputManager : MonoBehaviour {
 				GrabObject(col);
 			}
 		}
+
+		if (col.gameObject.CompareTag("Rich"))
+		{
+			if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				RaiseShield(col);
+			}
+			else if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				LowerShield(col);
+			}
+		}
 	}
 
 	void GrabObject(Collider coli)
@@ -183,6 +198,16 @@ public class ControllerInputManager : MonoBehaviour {
 		rigidBody.isKinematic = false;
 		rigidBody.velocity = device.velocity * throwForce;
 		rigidBody.angularVelocity = device.angularVelocity;
+	}
+
+	void RaiseShield(Collider coli)
+	{
+		coli.transform.Find("Shield").gameObject.SetActive(true);
+	}
+
+	void LowerShield(Collider coli)
+	{
+		coli.transform.Find("Shield").gameObject.SetActive(false);
 	}
 
 	/**** End Grabbing and Throwing ****/
