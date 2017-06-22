@@ -7,6 +7,8 @@ public class Dog : MonoBehaviour
 	// This script animates the dogs randomly and handles how they behave if they are tossed off the island
 
 	public AudioSource fallWhine;
+	public bool isParent = false;
+	public ParentManager parentManager;
 
 	Vector3 startPosition;
 	Quaternion startRotation;
@@ -48,6 +50,10 @@ public class Dog : MonoBehaviour
 		gameObject.SetActive(false);
 		transform.position = startPosition;
 		transform.rotation = startRotation;
+		if (isParent)
+		{
+			parentManager.throwOverboard();
+		}
 	}
 
 	void startAnimations()

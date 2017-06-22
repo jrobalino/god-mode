@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 65eb6da4dbc679443b2c0c869bc46558
-timeCreated: 1481241092
-licenseType: Store
+timeCreated: 1498083526
+licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
@@ -92,118 +92,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 42
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Blank_basecolor
       alphaSource: 6
@@ -211,8 +157,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -309,118 +254,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Cubits_Dogos_Demo_basecolor
       alphaSource: 6
@@ -428,8 +319,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -526,118 +416,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Cupcake_basecolor
       alphaSource: 6
@@ -645,8 +481,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -743,118 +578,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Icecream_basecolor
       alphaSource: 6
@@ -862,8 +643,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -960,118 +740,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Lava_basecolor
       alphaSource: 6
@@ -1079,8 +805,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -1177,118 +902,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Peanut_basecolor
       alphaSource: 6
@@ -1296,8 +967,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
@@ -1394,118 +1064,64 @@ SubstanceImporter:
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
-      serializedVersion: 2
+      serializedVersion: 3
       texEnvs:
-      - first:
-          name: _BumpMap
-        second:
+      - _BumpMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailAlbedoMap
-        second:
+      - _DetailAlbedoMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailMask
-        second:
+      - _DetailMask:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _DetailNormalMap
-        second:
+      - _DetailNormalMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _EmissionMap
-        second:
+      - _EmissionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MainTex
-        second:
+      - _MainTex:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _MetallicGlossMap
-        second:
+      - _MetallicGlossMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _OcclusionMap
-        second:
+      - _OcclusionMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
-      - first:
-          name: _ParallaxMap
-        second:
+      - _ParallaxMap:
           texture: {instanceID: 0}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
-      - first:
-          name: _BumpScale
-        second: 1
-      - first:
-          name: _Cutoff
-        second: 0.5
-      - first:
-          name: _DetailNormalMapScale
-        second: 1
-      - first:
-          name: _DstBlend
-        second: 0
-      - first:
-          name: _GlossMapScale
-        second: 1
-      - first:
-          name: _Glossiness
-        second: 0
-      - first:
-          name: _GlossyReflections
-        second: 1
-      - first:
-          name: _Metallic
-        second: 0
-      - first:
-          name: _Mode
-        second: 0
-      - first:
-          name: _OcclusionStrength
-        second: 1
-      - first:
-          name: _Parallax
-        second: 0.02
-      - first:
-          name: _SmoothnessTextureChannel
-        second: 0
-      - first:
-          name: _SpecularHighlights
-        second: 1
-      - first:
-          name: _SrcBlend
-        second: 1
-      - first:
-          name: _UVSec
-        second: 0
-      - first:
-          name: _ZWrite
-        second: 1
+      - _BumpScale: 1
+      - _Cutoff: 0.5
+      - _DetailNormalMapScale: 1
+      - _DstBlend: 0
+      - _GlossMapScale: 1
+      - _Glossiness: 0
+      - _GlossyReflections: 1
+      - _Metallic: 0
+      - _Mode: 0
+      - _OcclusionStrength: 1
+      - _Parallax: 0.02
+      - _SmoothnessTextureChannel: 0
+      - _SpecularHighlights: 1
+      - _SrcBlend: 1
+      - _UVSec: 0
+      - _ZWrite: 1
       colors:
-      - first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      - first:
-          name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+      - _Color: {r: 1, g: 1, b: 1, a: 1}
+      - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: Vanilla_basecolor
       alphaSource: 6
@@ -1513,8 +1129,7 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     textureAssignments:
-    - shaderProp:
-        name: _MainTex
+    - shaderProp: _MainTex
       material: {instanceID: 0}
       baseUID: 226285648
     buildTargetSettings:
