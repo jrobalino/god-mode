@@ -15,6 +15,8 @@ public class MineSweeper : MonoBehaviour
 	bool hitMine = false;
 
 	Animator anim;
+	Material material;
+	public Material burntMaterial;
 
 	// Use this for initialization
 	void Start()
@@ -26,6 +28,9 @@ public class MineSweeper : MonoBehaviour
 		// Get the animator for the dog
 		anim = GetComponentInChildren<Animator>();
 		startAnimations();
+
+		// Get the dog's original material
+		material = transform.GetChild(2).GetChild(0).GetComponent<Renderer>().material;
 
 	}
 
@@ -60,7 +65,8 @@ public class MineSweeper : MonoBehaviour
 
 	public void blowUpDog()
 	{
-		// Disable the dog's animator after it hits a mine and call the LandmineManager script to disable the dog's movement and controls
+		// Disable the dog's animator after it hits a mine, change it's material, and call the LandmineManager script to disable the dog's movement and controls
+		material.mainTexture = burntMaterial.mainTexture;
 		anim.enabled = false;
 		hitMine = true;
 		landmineManager.blowUpDog();
