@@ -47,8 +47,10 @@ public class ControllerInputManager : MonoBehaviour {
 	public float moveSpeed = 4f;
 	private Vector3 movementDirection;
 
-	// Dog Shield
-	Color shieldColor;
+	// Landmine level
+	public bool rightController;
+	public bool isLandmineLevel = false;
+	public LandmineManager landmines;
 
 
 	// Use this for initialization
@@ -150,6 +152,41 @@ public class ControllerInputManager : MonoBehaviour {
 			}
 		}
 		/**** End Teleportation ****/
+
+		/**** Control landmine dogs ****/
+		if (rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) && isLandmineLevel)
+		{
+			Vector2 touchpad = (rightDevice.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
+			//print("Pressing Touchpad");
+
+			if (touchpad.y > 0.5f)
+			{
+				landmines.moveDogForward();
+			}
+
+			if (touchpad.y < -0.5f)
+			{
+				landmines.moveDogBackward();
+			}
+
+			if (touchpad.x > 0.7f)
+			{
+				landmines.moveDogRight();
+
+			}
+
+			if (touchpad.x < -0.7f)
+			{
+				landmines.moveDogLeft();
+			}
+		}
+
+		if (rightDevice.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && isLandmineLevel)
+		{
+			landmines.stopDog();
+		}
+
+
 	}
 
 	/*** Grabbing and Throwing ****/

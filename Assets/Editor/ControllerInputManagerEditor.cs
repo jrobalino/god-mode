@@ -52,6 +52,25 @@ public class ControllerInputEditor : Editor
 				EditorGUI.indentLevel--;
 			}
 		}
+
+		ControllerInputManager.rightController = EditorGUILayout.Toggle("Right Controller", ControllerInputManager.rightController);
+		using (var group = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(ControllerInputManager.rightController)))
+		{
+			if (group.visible == true)
+			{
+				EditorGUI.indentLevel++;
+				ControllerInputManager.isLandmineLevel = EditorGUILayout.Toggle("isLandmineLevel?", ControllerInputManager.isLandmineLevel);
+
+				using (var group2 = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(ControllerInputManager.isLandmineLevel)))
+				{
+					if (group2.visible == true)
+					{
+						EditorGUI.indentLevel++;
+						ControllerInputManager.landmines = (LandmineManager)EditorGUILayout.ObjectField(ControllerInputManager.landmines, typeof(LandmineManager), true);
+					}
+				}
+			}
+		}
 	}
 }
 
