@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Campfire : MonoBehaviour {
 
-	// This script detects when the rich dog makes it safely to the exit
+	// This script detects whether a dog makes it safely to the exit
 	public LandmineManager landmineManager;
 	
 	// Use this for initialization

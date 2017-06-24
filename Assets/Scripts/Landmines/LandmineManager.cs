@@ -24,6 +24,8 @@ public class LandmineManager : MonoBehaviour {
 	public AudioSource levelCleared;
 	public GameObject exit;
 
+	MineSweeper mineSweeper;
+
 	public SteamVR_LoadLevel loadLevel, replayLevel;
 
 	// Use this for initialization
@@ -47,6 +49,8 @@ public class LandmineManager : MonoBehaviour {
 		// Get the active dog's animator
 		dog = dogs[i];
 		anim = dog.GetComponentInChildren<Animator>();
+		mineSweeper = dog.GetComponent<MineSweeper>();
+		mineSweeper.stopAnimating();
 		dogAlive = true;
 	} 
 

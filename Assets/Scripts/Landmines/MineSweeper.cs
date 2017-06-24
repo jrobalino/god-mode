@@ -94,6 +94,11 @@ public class MineSweeper : MonoBehaviour
 		
 
 	}
+
+	public void stopAnimating()
+	{
+		keepAnimating = false;
+	}
 }
 
 
