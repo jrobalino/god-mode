@@ -26,6 +26,12 @@ public class Mine : MonoBehaviour {
 			explosion.gameObject.SetActive(true);
 			mineSweeper = collision.gameObject.GetComponent<MineSweeper>();
 			mineSweeper.blowUpDog();
+			Invoke("DestroyMine", 8.0f);
 		}
+	}
+
+	void DestroyMine()
+	{
+		gameObject.SetActive(false);
 	}
 }

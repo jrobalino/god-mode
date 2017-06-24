@@ -12,6 +12,7 @@ public class MineSweeper : MonoBehaviour
 	Vector3 startPosition;
 	Quaternion startRotation;
 	bool keepAnimating = true;
+	bool hitMine = false;
 
 	Animator anim;
 
@@ -41,6 +42,11 @@ public class MineSweeper : MonoBehaviour
 		if (transform.position.y < -25)
 		{
 			killDog();
+			// Check that the dog wasn't already killed by a mine before getting the next dog
+			if (!hitMine)
+			{
+				landmineManager.nextDog();
+			}
 		}
 	}
 
@@ -56,6 +62,7 @@ public class MineSweeper : MonoBehaviour
 	{
 		// Disable the dog's animator after it hits a mine and call the LandmineManager script to disable the dog's movement and controls
 		anim.enabled = false;
+		hitMine = true;
 		landmineManager.blowUpDog();
 	}
 

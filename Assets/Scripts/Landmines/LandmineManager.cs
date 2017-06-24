@@ -6,7 +6,9 @@ public class LandmineManager : MonoBehaviour {
 
 	// This script moves the dogs in the landmine level and checks the player's progress through the level
 
-	public GameObject dog;
+	public GameObject[] dogs;
+	GameObject dog;
+	int i = 0;
 	public float dogSpeed = 1.0f;
 	public float smoothing = 100f;
 	
@@ -15,14 +17,19 @@ public class LandmineManager : MonoBehaviour {
 	bool movingForward = false;
 	Vector3 dogDirection;
 	bool dogAlive = true;
+	bool dogBlownUp = false;
 
+	public GameObject player;
+	public AudioSource dogReady;
 	public AudioSource levelCleared;
 	public GameObject exit;
+
+	public SteamVR_LoadLevel loadLevel, replayLevel;
 
 	// Use this for initialization
 	void Start()
 	{
-		anim = dog.GetComponentInChildren<Animator>();
+		initializeDog();
 	}
 
 	// Update is called once per frame
@@ -35,7 +42,15 @@ public class LandmineManager : MonoBehaviour {
 		}
 	}
 
-	public void checkConfiguration()
+	void initializeDog()
+	{
+		// Get the active dog's animator
+		dog = dogs[i];
+		anim = dog.GetComponentInChildren<Animator>();
+		dogAlive = true;
+	} 
+
+	public void nextLevel()
 	{
 		levelCleared.Play();
 		exit.SetActive(true);
@@ -109,7 +124,36 @@ public class LandmineManager : MonoBehaviour {
 	{
 		// Disable the dog's movement and controls if it has been blown up
 		dogAlive = false;
+		dogBlownUp = true;
 		movingForward = false;
+		nextDog();
+	}
+
+	public void nextDog()
+	{
+		// Initialize the next dog available
+		if (i < dogs.Length - 1)
+		{
+			i++;
+			initializeDog();
+			Invoke("spawnDogNearPlayer", 2.0f);
+		}
+		else restartLevel();
+			
+	}
+
+	void spawnDogNearPlayer()
+	{
+		// spawn the next dog a little behind the player
+		dog.transform.position = player.transform.position + new Vector3(0f, 0f, 1f);
+		dogReady.Play();
+
+	}
+
+	void restartLevel() // Restarts the level
+	{
+		exit.SetActive(false);
+		replayLevel.Trigger();
 	}
 
 
