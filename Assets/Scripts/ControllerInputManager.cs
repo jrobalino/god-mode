@@ -52,6 +52,10 @@ public class ControllerInputManager : MonoBehaviour {
 	public bool isLandmineLevel = false;
 	public LandmineManager landmines;
 
+	// Hellfire level
+	public bool isHellfireLevel = false;
+	bool dogChambered = false;
+	public AudioSource shootDog;
 
 	// Use this for initialization
 	void Start () {
@@ -200,11 +204,27 @@ public class ControllerInputManager : MonoBehaviour {
 		{
 			if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
 			{
-				ThrowObject(col);
+				if (!isHellfireLevel)
+				{
+					ThrowObject(col);
+				}
 			}
 			else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
 			{
-				GrabObject(col);
+				if (!isHellfireLevel) // Normal grabbing functionality
+				{
+					GrabObject(col);
+				}
+				else if (dogChambered) // For the Hellfire level, shoot a dog out if it has been chambered by the player
+				{
+					dogChambered = false;
+					ShootDog(col);
+				}
+				else // For the Hellfire level, chamber a dog on the first trigger click
+				{
+					dogChambered = true;
+					GrabObject(col);
+				}
 			}
 		}
 
@@ -221,6 +241,7 @@ public class ControllerInputManager : MonoBehaviour {
 		}
 	}
 
+	// Grab dogs or objects
 	void GrabObject(Collider coli)
 	{
 		coli.transform.SetParent(gameObject.transform);
@@ -228,6 +249,7 @@ public class ControllerInputManager : MonoBehaviour {
 		device.TriggerHapticPulse(2000);
 	}
 
+	// Throw dogs or objects
 	void ThrowObject(Collider coli)
 	{
 		coli.transform.SetParent(null);
@@ -235,6 +257,17 @@ public class ControllerInputManager : MonoBehaviour {
 		rigidBody.isKinematic = false;
 		rigidBody.velocity = device.velocity * throwForce;
 		rigidBody.angularVelocity = device.angularVelocity;
+	}
+
+	// Shoot dog out in front of player
+	void ShootDog(Collider coli)
+	{
+		coli.transform.SetParent(null);
+		Rigidbody rigidBody = coli.GetComponent<Rigidbody>();
+		rigidBody.isKinematic = false;
+		shootDog.Play();
+		rigidBody.AddTorque(0, 5f, 0, ForceMode.Impulse);
+		rigidBody.AddForce(gameObject.transform.forward * 25f, ForceMode.Impulse);
 	}
 
 	// The following shield functions protect the rich dogs from being grabbed and thrown

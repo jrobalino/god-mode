@@ -71,6 +71,16 @@ public class ControllerInputEditor : Editor
 				}
 			}
 		}
+
+		ControllerInputManager.isHellfireLevel = EditorGUILayout.Toggle("isHellfireLevel?", ControllerInputManager.isHellfireLevel);
+		using (var group = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(ControllerInputManager.isHellfireLevel)))
+		{
+			if (group.visible == true)
+			{
+				EditorGUI.indentLevel++;
+				ControllerInputManager.shootDog = (AudioSource)EditorGUILayout.ObjectField(ControllerInputManager.shootDog, typeof(AudioSource), true);
+			}
+		}
 	}
 }
 
