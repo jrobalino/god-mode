@@ -204,18 +204,20 @@ public class ControllerInputManager : MonoBehaviour {
 		{
 			if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
 			{
-				if (!isHellfireLevel)
-				{
 					ThrowObject(col);
-				}
 			}
 			else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
 			{
-				if (!isHellfireLevel) // Normal grabbing functionality
-				{
+				// Normal grabbing functionality
 					GrabObject(col);
-				}
-				else if (dogChambered) // For the Hellfire level, shoot a dog out if it has been chambered by the player
+			}
+		}
+
+		if (col.gameObject.CompareTag("Shootable"))
+		{
+			if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				if (dogChambered) // For the Hellfire level, shoot a dog out if it has been chambered by the player
 				{
 					dogChambered = false;
 					ShootDog(col);
