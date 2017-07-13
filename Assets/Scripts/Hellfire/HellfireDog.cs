@@ -7,6 +7,7 @@ public class HellfireDog : MonoBehaviour
 	// This script animates the dogs randomly and handles how they behave if they are tossed off the island
 
 	public AudioSource fallWhine;
+	public HellfireManager hellfireManager;
 
 	Vector3 startPosition;
 	Quaternion startRotation;
@@ -48,6 +49,7 @@ public class HellfireDog : MonoBehaviour
 		gameObject.SetActive(false);
 		transform.position = startPosition;
 		transform.rotation = startRotation;
+		hellfireManager.killDog();
 	}
 
 	void startAnimations()
