@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class HellfireManager : MonoBehaviour
 {
-	// This script checks the progress of the player through the Hellfire level 
+	// This script checks the progress of the player on the first island of the Hellfire level 
 
 	float damnedDogs = 0;
 	float deadDogs = 0;
 	public float dogsToDamn = 4f;
 	public float dogCount = 7f;
 	bool targetsRemainUnhit = true;
+	public GameObject nextIsland;
+	public AudioSource levelCleared;
 
 	public SteamVR_LoadLevel restartLevel;
 
@@ -47,8 +49,10 @@ public class HellfireManager : MonoBehaviour
 		if (damnedDogs == dogsToDamn) // All targets have been hit
 		{
 			targetsRemainUnhit = false;
+			levelCleared.Play();
+			nextIsland.SetActive(true);
 		}
-		if (deadDogs == dogCount && targetsRemainUnhit) // Reset level if every dog has been killed or damned but targets remain unhit
+		if (((dogCount - deadDogs) < (dogsToDamn - damnedDogs)) && targetsRemainUnhit) // Reset level if there aren't enough dogs to hit the remaining targets
 		{
 			resetLevel();
 		}
