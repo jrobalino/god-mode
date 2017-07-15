@@ -12,7 +12,7 @@ public class HellfireManager : MonoBehaviour
 	public float dogCount = 7f;
 	bool targetsRemainUnhit = true;
 	public GameObject nextIsland;
-	public AudioSource levelCleared;
+	public AudioSource levelCleared, firstInstructions, secondInstructions;
 
 	public SteamVR_LoadLevel restartLevel;
 
@@ -50,6 +50,8 @@ public class HellfireManager : MonoBehaviour
 		{
 			targetsRemainUnhit = false;
 			levelCleared.Play();
+			firstInstructions.Stop();
+			secondInstructions.Play();
 			nextIsland.SetActive(true);
 		}
 		if (((dogCount - deadDogs) < (dogsToDamn - damnedDogs)) && targetsRemainUnhit) // Reset level if there aren't enough dogs to hit the remaining targets

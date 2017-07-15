@@ -7,11 +7,13 @@ public class HellPortal : MonoBehaviour
 {
 	// This script controls what happens when the player casts an object through the heaven or hell portal
 	public Chest chest;
-	public AudioSource goodJob, badJob, levelCleared;
+	public AudioSource goodJob, badJob, levelCleared, secondInstructions, treasureInstructions, puppySaved, puppySaved2, puppySaved3;
 
 	public SteamVR_LoadLevel resetLevel;
 	//public SteamVR_LoadLevel statusQuoTrue;
 	public SteamVR_LoadLevel statusQuoFalse;
+
+	int puppiesInHeaven = 0;
 
 	// Use this for initialization
 	void Start()
@@ -34,7 +36,23 @@ public class HellPortal : MonoBehaviour
 
 	public void puppyHeaven()
 	{
-		// Nothing happens -- the player can send the puppies to heaven before deciding what to do about the chest
+		// If the player tosses a puppy into heaven instead of hell, provide relevant commentary
+		puppiesInHeaven++;
+		switch (puppiesInHeaven)
+		{
+			case 1:
+				secondInstructions.Stop();
+				puppySaved.Play();
+				break;
+			case 2:
+				puppySaved.Stop();
+				puppySaved2.Play();
+				break;
+			case 3:
+				puppySaved2.Stop();
+				puppySaved3.Play();
+				break;
+		}
 	}
 
 	public void closedChestHeaven() // The player fails if they send the chest to the rich dogs without opening it
@@ -59,6 +77,12 @@ public class HellPortal : MonoBehaviour
 	{
 		levelCleared.Play();
 		statusQuoFalse.Trigger();
+	}
+
+	public void explainChest() // Explain what to do with the open treasure chest
+	{
+		secondInstructions.Stop();
+		treasureInstructions.Play();
 	}
 
 }

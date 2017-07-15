@@ -7,9 +7,9 @@ public class Chest : MonoBehaviour {
 	// This script controls whether the chest is open or closed based on whether the player casts the puppies into hell
 
 	public GameObject openChest;
-	public AudioSource badJob;
-	public AudioSource levelCleared;
+	public AudioSource badJob, levelCleared;
 	public int puppyCount = 3;
+	public HellPortal hellPortal;
 	int forsakenPuppies = 0;
 
 	public SteamVR_LoadLevel resetLevel;
@@ -43,6 +43,7 @@ public class Chest : MonoBehaviour {
 		if (forsakenPuppies == puppyCount)
 		{
 			levelCleared.Play();
+			hellPortal.explainChest();
 			openChest.SetActive(true);
 			gameObject.SetActive(false);
 		}
