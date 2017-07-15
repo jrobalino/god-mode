@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HellPortal : MonoBehaviour
 {
 	// This script controls what happens when the player casts an object through the heaven or hell portal
 	public Chest chest;
-	public AudioSource goodJob, badJob;
+	public AudioSource goodJob, badJob, levelCleared;
 
 	public SteamVR_LoadLevel resetLevel;
+	//public SteamVR_LoadLevel statusQuoTrue;
+	public SteamVR_LoadLevel statusQuoFalse;
 
 	// Use this for initialization
 	void Start()
@@ -42,17 +45,20 @@ public class HellPortal : MonoBehaviour
 
 	public void closedChestHell() // The player completes the game while upsetting the status quo if they send the closed chest to hell
 	{
-		print("You disrupted the status quo!");
+		levelCleared.Play();
+		statusQuoFalse.Trigger();
 	}
 
 	public void openChestHeaven() // The player completes the game while maintaining the status quo if they send the opened chest to heaven
 	{
-		print("You maintained the status quo!");
+		levelCleared.Play();
+		SceneManager.LoadScene("StatusQuoTrue"); // Using SceneManager for this instance due to SteamVR bug
 	}
 
 	public void openChestHell() // The player completes the game while upsetting the status quo if they send the opened chest to hell
 	{
-		print("You disrupted the status quo!");
+		levelCleared.Play();
+		statusQuoFalse.Trigger();
 	}
 
 }
