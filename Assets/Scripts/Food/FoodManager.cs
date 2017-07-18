@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodManager : MonoBehaviour {
 
@@ -12,11 +13,14 @@ public class FoodManager : MonoBehaviour {
 	public int richBowlsNeeded = 4; // The target number of bowls to feed the rich dogs
 	public int poorBowlsNeeded = 1; // The target number of bowls to feed the poor dogs
 
-	public AudioSource goodJob;
-	public AudioSource badJob;
-	public AudioSource levelCleared;
+	public AudioSource goodJob, badJob, levelCleared, achievementClip;
+
 
 	public GameObject exit;
+	public GameObject achievement;
+	public GameObject player;
+	Text achievementText;
+	bool achievement1, achievement2 = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -107,5 +111,41 @@ public class FoodManager : MonoBehaviour {
 	void loadNextLevel() // Activates the exit portal
 	{
 		exit.SetActive(true);
+	}
+
+	public void unlockAchievement(int scenario) // Displays achievements as they are unlocked
+	{
+		achievementText = achievement.GetComponentsInChildren<Text>()[1]; // the text to overwrite depending on what achievement was unlocked
+		achievement.transform.position = player.transform.position + player.transform.forward * 3f; // spawn the achievement in front of the player
+		achievement.transform.position = new Vector3(achievement.transform.position.x, player.transform.position.y, achievement.transform.position.z); // raise the achievement to player height
+		achievement.transform.rotation = Quaternion.LookRotation(player.transform.forward); // align the achievement in the direction the player is looking
+		switch (scenario)
+		{
+			case 0:
+				if(!achievement1)
+				{
+					achievement1 = true;
+					achievementText.text = "Gluttony";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 3.0f);
+				}
+				break;
+			case 1:
+				if (!achievement2)
+				{
+					achievement2 = true;
+					achievementText.text = "Top Chef";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 3.0f);
+				}
+				break;
+		}
+	}
+
+	void hideAchievement()
+	{
+		achievement.SetActive(false);
 	}
 }
