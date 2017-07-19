@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ParentManager : MonoBehaviour {
 
@@ -15,12 +16,18 @@ public class ParentManager : MonoBehaviour {
 	public AudioSource badJob;
 	public AudioSource levelCleared;
 	public AudioSource sadPuppy;
+	public AudioSource achievementClip;
 
 	public GameObject jail;
 	public GameObject exit;
 
 	public SteamVR_LoadLevel loadLevel;
-	
+
+	public GameObject achievement;
+	public GameObject player;
+	Text achievementText;
+	bool achievement1 = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -124,5 +131,31 @@ public class ParentManager : MonoBehaviour {
 	{
 		exit.SetActive(false);
 		loadLevel.Trigger();
+	}
+
+	public void unlockAchievement(int scenario) // Displays achievements as they are unlocked
+	{
+		achievementText = achievement.GetComponentsInChildren<Text>()[1]; // the text to overwrite depending on what achievement was unlocked
+		achievement.transform.position = player.transform.position + player.transform.forward * 3f; // spawn the achievement in front of the player
+		achievement.transform.position = new Vector3(achievement.transform.position.x, player.transform.position.y, achievement.transform.position.z); // raise the achievement to player height
+		achievement.transform.rotation = Quaternion.LookRotation(player.transform.forward); // align the achievement in the direction the player is looking
+		switch (scenario)
+		{
+			case 0:
+				if (!achievement1)
+				{
+					achievement1 = true;
+					achievementText.text = "Adoption";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 3.0f);
+				}
+				break;
+		}
+	}
+
+	void hideAchievement()
+	{
+		achievement.SetActive(false);
 	}
 }

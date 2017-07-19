@@ -7,7 +7,7 @@ public class Dog : MonoBehaviour
 	// This script animates the dogs randomly and handles how they behave if they are tossed off the island
 
 	public AudioSource fallWhine;
-	public bool isParent = false;
+	public bool isParent, isPuppy = false;
 	public ParentManager parentManager;
 
 	Vector3 startPosition;
@@ -31,6 +31,11 @@ public class Dog : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if(transform.position.y > 7.3f && isPuppy)
+		{
+			parentManager.unlockAchievement(0);
+		}
+		
 		// Have the dog whimper if it is tossed over the edge of the island
 		if (transform.position.y < -1 && transform.position.y > -1.1)
 		{
