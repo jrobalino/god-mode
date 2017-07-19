@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HellfireManager : MonoBehaviour
 {
@@ -12,7 +13,12 @@ public class HellfireManager : MonoBehaviour
 	public float dogCount = 7f;
 	bool targetsRemainUnhit = true;
 	public GameObject nextIsland;
-	public AudioSource levelCleared, firstInstructions, secondInstructions;
+	public AudioSource levelCleared, firstInstructions, secondInstructions, achievementClip;
+
+	public GameObject achievement;
+	public GameObject player;
+	Text achievementText;
+	bool achievement1 = false;
 
 	public SteamVR_LoadLevel restartLevel;
 
@@ -48,6 +54,10 @@ public class HellfireManager : MonoBehaviour
 	{
 		if (damnedDogs == dogsToDamn) // All targets have been hit
 		{
+			if (deadDogs == damnedDogs)
+			{
+				unlockAchievement(0);
+			}
 			targetsRemainUnhit = false;
 			levelCleared.Play();
 			firstInstructions.Stop();
@@ -63,5 +73,31 @@ public class HellfireManager : MonoBehaviour
 	void resetLevel()
 	{
 		restartLevel.Trigger();
+	}
+
+	public void unlockAchievement(int scenario) // Displays achievements as they are unlocked
+	{
+		achievementText = achievement.GetComponentsInChildren<Text>()[1]; // the text to overwrite depending on what achievement was unlocked
+		achievement.transform.position = player.transform.position + player.transform.forward * 3f; // spawn the achievement in front of the player
+		achievement.transform.position = new Vector3(achievement.transform.position.x, player.transform.position.y, achievement.transform.position.z); // raise the achievement to player height
+		achievement.transform.rotation = Quaternion.LookRotation(player.transform.forward); // align the achievement in the direction the player is looking
+		switch (scenario)
+		{
+			case 0:
+				if (!achievement1)
+				{
+					achievement1 = true;
+					achievementText.text = "Sharpshooter";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 3.0f);
+				}
+				break;
+		}
+	}
+
+	void hideAchievement()
+	{
+		achievement.SetActive(false);
 	}
 }

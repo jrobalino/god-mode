@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LandmineManager : MonoBehaviour {
 
@@ -22,9 +23,15 @@ public class LandmineManager : MonoBehaviour {
 	public GameObject player;
 	public AudioSource dogReady;
 	public AudioSource levelCleared;
+	public AudioSource achievementClip;
 	public GameObject exit;
 
 	MineSweeper mineSweeper;
+
+	public GameObject achievement;
+	public GameObject playerHead;
+	Text achievementText;
+	bool achievement1 = false;
 
 	public SteamVR_LoadLevel loadLevel, replayLevel;
 
@@ -56,6 +63,10 @@ public class LandmineManager : MonoBehaviour {
 
 	public void nextLevel()
 	{
+		if(i == 0)
+		{
+			unlockAchievement(0);
+		}
 		levelCleared.Play();
 		exit.SetActive(true);
 
@@ -158,6 +169,32 @@ public class LandmineManager : MonoBehaviour {
 	{
 		exit.SetActive(false);
 		replayLevel.Trigger();
+	}
+
+	public void unlockAchievement(int scenario) // Displays achievements as they are unlocked
+	{
+		achievementText = achievement.GetComponentsInChildren<Text>()[1]; // the text to overwrite depending on what achievement was unlocked
+		achievement.transform.position = playerHead.transform.position + playerHead.transform.forward * 3f; // spawn the achievement in front of the player
+		achievement.transform.position = new Vector3(achievement.transform.position.x, playerHead.transform.position.y, achievement.transform.position.z); // raise the achievement to player height
+		achievement.transform.rotation = Quaternion.LookRotation(playerHead.transform.forward); // align the achievement in the direction the player is looking
+		switch (scenario)
+		{
+			case 0:
+				if (!achievement1)
+				{
+					achievement1 = true;
+					achievementText.text = "Minesweeper";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 3.0f);
+				}
+				break;
+		}
+	}
+
+	void hideAchievement()
+	{
+		achievement.SetActive(false);
 	}
 
 
