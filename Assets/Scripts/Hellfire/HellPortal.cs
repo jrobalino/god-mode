@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HellPortal : MonoBehaviour
 {
 	// This script controls what happens when the player casts an object through the heaven or hell portal
 	public Chest chest;
-	public AudioSource goodJob, badJob, levelCleared, secondInstructions, treasureInstructions, puppySaved, puppySaved2, puppySaved3;
+	public AudioSource goodJob, badJob, levelCleared, secondInstructions, treasureInstructions, puppySaved, puppySaved2, puppySaved3, achievementClip;
 
 	public SteamVR_LoadLevel resetLevel;
 	//public SteamVR_LoadLevel statusQuoTrue;
 	public SteamVR_LoadLevel statusQuoFalse;
+
+	public GameObject achievement;
+	public GameObject player;
+	Text achievementText;
+	bool achievement1 = false;
 
 	int puppiesInHeaven = 0;
 
@@ -50,6 +56,7 @@ public class HellPortal : MonoBehaviour
 				break;
 			case 3:
 				puppySaved2.Stop();
+				unlockAchievement(0);
 				puppySaved3.Play();
 				break;
 		}
@@ -83,6 +90,32 @@ public class HellPortal : MonoBehaviour
 	{
 		secondInstructions.Stop();
 		treasureInstructions.Play();
+	}
+
+	public void unlockAchievement(int scenario) // Displays achievements as they are unlocked
+	{
+		achievementText = achievement.GetComponentsInChildren<Text>()[1]; // the text to overwrite depending on what achievement was unlocked
+		achievement.transform.position = player.transform.position - player.transform.forward * 3f; // spawn the achievement behind the player (so it's not in the portal)
+		achievement.transform.position = new Vector3(achievement.transform.position.x, player.transform.position.y, achievement.transform.position.z); // raise the achievement to player height
+		achievement.transform.rotation = Quaternion.LookRotation(-player.transform.forward); // align the achievement in the direction the player is looking
+		switch (scenario)
+		{
+			case 0:
+				if (!achievement1)
+				{
+					achievement1 = true;
+					achievementText.text = "Favorite Uncle";
+					achievementClip.Play();
+					achievement.SetActive(true);
+					Invoke("hideAchievement", 10.0f);
+				}
+				break;
+		}
+	}
+
+	void hideAchievement()
+	{
+		achievement.SetActive(false);
 	}
 
 }
