@@ -51,7 +51,7 @@ The project satisfies the following achievements per the Udacity project rubric 
 
 ## Tip for Udacity Reviewer
 
-The landmine level can be time consuming to complete, but if you're in a rush, no worries: I built a cheat into the system. Simply align a dog in front of known mine location, teleport to the end of the level, and then drive the dog forward. A mine will blow up in the distance and the next dog will spawn near you at the end of the level.
+The landmine level can be time consuming to complete, but if you're in a rush, no worries: I built a cheat into the system. Simply align a dog in front of a known mine location, teleport to the end of the level, and then drive the dog forward. A mine will blow up in the distance and the next dog will spawn near you at the end of the level.
 
 ## Ideas for Improvement
 
