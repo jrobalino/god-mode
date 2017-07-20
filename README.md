@@ -3,11 +3,11 @@
 This repo contains my Udacity VR Developer Nanodegree capstone project. The experience casts players as a deity in charge of maintaining the status quo between a set of rich and poor dogs. Without pity, players must ration food unevenly, separate puppies from their parents, and risk the lives of poor dogs. Ultimately, players must sacrifice the souls of the poor dogs in order to bless the rich dogs. In return, players receive adoring worship from those that benefit. But is maintaining the status quo truly the only option?
 
 ## Video Walkthrough
-[View on Youtube](https://youtu.be/pYS6a06gcqw)
+[View on YouTube](https://youtu.be/pYS6a06gcqw)
 
 ## List of Achievements
 
-The project satisfies the following achievements per the Udacity project rubric:
+The project satisfies the following achievements per the Udacity project rubric (view a [YouTube video overview of achievements here](https://youtu.be/yBV4xEjYz-4)):
 
 ### Fundamentals: 500 points
 
@@ -48,6 +48,20 @@ The project satisfies the following achievements per the Udacity project rubric:
 | Mauri | "It's a little low." | Spawn achievement at player height |
 | Mauri | "What if I throw the chest into hell?" | Handle scenario where player casts unopened chest into hell |
 | Mauri | "Do I have to do anything in this level?" | Change voiceover script in last scene to congratulate the player on a completed journey |
+
+## Tip for Udacity Reviewer
+
+The landmine level can be time consuming to complete, but if you're in a rush, no worries: I built a cheat into the system. Simply align a dog in front of known mine location, teleport to the end of the level, and then drive the dog forward. A mine will blow up in the distance and the next dog will spawn near you at the end of the level.
+
+## Ideas for Improvement
+
+If I was going to further refine the experience, I'd focus on the following items:
+
+- Add more levels (I had plans for a level where you use a catapult to preferentially destroy the homes of poor dogs from afar, a level where you need quick reflexes to prevent the rich dog's water supply from being contaminated, and a level where you deal with aggresive dogs, but decided to limit the scope of the project in the interest of time).
+- Improve the handling mechanics of the dogs in the landmine level. Currently, the dogs move strictly forwards, backwards, left, and right, but the controls could be improved for a full range of motion, which would help to prevent the dogs from getting unaligned when they hit colliders in the environment.
+- Add more achievements and employ a system that provides hints to players about what the achievements might be in a given level.
+- Allow players to choose the 'good' path in every level, not just the last one, and determine the ending based on how many 'good' versus 'evil' actions they take throughout the game.
+
 
 
 
