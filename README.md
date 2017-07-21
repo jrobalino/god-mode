@@ -49,6 +49,16 @@ The project satisfies the following achievements per the Udacity project rubric 
 | Mauri | "What if I throw the chest into hell?" | Handle scenario where player casts unopened chest into hell |
 | Mauri | "Do I have to do anything in this level?" | Change voiceover script in last scene to congratulate the player on a completed journey |
 
+## Spatial Audio
+
+This project uses Steam Audio for immersive sound. The following game objects contain a Phonon Source to improve acoustic immersion:
+
+- Every poor dog uses Steam Audio for their fall whine when tossed off the island
+- Bubbling cauldrons in the Intro level
+- Crackling fire in the Food level
+- Explosions in the Landmine level
+
+
 ## Tip for Udacity Reviewer
 
 The landmine level can be time consuming to complete, but if you're in a rush, no worries: I built a cheat into the system. Simply align a dog in front of a known mine location, teleport to the end of the level, and then drive the dog forward. A mine will blow up in the distance and the next dog will spawn near you at the end of the level.
